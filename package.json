@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "jest"
+    "test": "jest",
+    "build": "echo \"Build Success\"",
+    "start": "node src/server.js"
   },
   "author": "",
   "license": "ISC",
