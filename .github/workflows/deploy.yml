@@ -1,11 +1,11 @@
-name: Node Continues Integration
+name: Node Continues Deployment
 
 on:
-  pull_request:
+  push:
     branches: [main]
 
 jobs:
-  test_pull_request:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
