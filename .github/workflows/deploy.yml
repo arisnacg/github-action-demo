@@ -11,5 +11,5 @@ jobs:
       - uses: actions/checkout@master
       - run: heroku git:remote -a arisna-devops-demo
       - run: git push heroku main
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+    env:
+      HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
