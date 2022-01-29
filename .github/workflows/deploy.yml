@@ -1,17 +1,14 @@
-name: Heroku Cotinuous Deployment
+name: Node Continues Integration
 
 on:
-  push:
-    brances: [ main ]
+  pull_request:
+    branches: [main]
 
 jobs:
-  deploy:
+  test_pull_request:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to Heroku
       - uses: actions/checkout@master
-        with:
-          node-version: 14
       - run: heroku git:remote -a arisna-devops-demo
       - run: git push heroku main
       env:
