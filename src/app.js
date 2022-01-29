@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 app.post("/login", async (req, res) => {
   const { password, username } = req.body;
   if (!password || !username) {
-    res.status(200).json({ successStatus: false });
+    res.status(400).json({ successStatus: false });
     return;
   }
 
